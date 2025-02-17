@@ -1,0 +1,12 @@
+<section id="tech-stack">
+    <div class="box">
+        <h2>Skills</h2>
+        <div class="tech-grid">
+            <div class="tech-item" appHoverEffect *ngFor="let tech of technologies">
+                <p>{{ tech.name }}</p>
+                <img [src]="tech.icon" [alt]="tech.name" />
+                <div class="revealed-area"></div>
+            </div>
+        </div>
+    </div>
+</section>
