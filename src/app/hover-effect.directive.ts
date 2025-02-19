@@ -1,11 +1,11 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appHoverEffect]'
+  selector: '[appHoverEffect]',
+  standalone: true,
 })
 export class HoverEffectDirective {
-
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseleave') onMouseLeave() {
     this.resetRevealedAreaStyle();
@@ -29,11 +29,15 @@ export class HoverEffectDirective {
     const revealedArea = this.el.nativeElement.querySelector('.revealed-area');
 
     if (revealedArea) {
-      this.renderer.setStyle(revealedArea, 'background', `radial-gradient(
+      this.renderer.setStyle(
+        revealedArea,
+        'background',
+        `radial-gradient(
         circle 60px at ${x}% ${y}%,
         transparent 100%,
         rgba(0, 0, 0, 1)
-      )`);
+      )`
+      );
     }
   }
 

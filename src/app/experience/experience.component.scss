@@ -1,6 +1,102 @@
 #experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: #fff;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f39c12;
+  }
+
+  .job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #f1c40f;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        border-left: 3px solid #f39c12;
+        padding-left: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #f1c40f;
+          border-left: 3px solid #f1c40f;
+        }
+      }
+    }
+  }
+
+  /* New styling for Books Read section */
+  .books-read {
+    margin-top: 3rem;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+
+    h3 {
+      font-size: 2rem;
+      color: #f39c12;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease, background 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          background: rgba(255, 255, 255, 0.15);
+        }
+
+        .book-year {
+          font-size: 0.9rem;
+          color: #f39c12;
+        }
+      }
+    }
+  }
 }

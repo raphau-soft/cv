@@ -31,6 +31,7 @@
 
 .navbar li {
   display: inline;
+  margin-left: 1rem;
 }
 
 .navbar a {
@@ -38,62 +39,35 @@
   cursor: pointer;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s ease;
 }
 
 .navbar a:hover {
   color: #3498db;
+  transform: scale(1.1);
 }
 
-.footer {
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem;
-  align-items: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.footer-left-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.footer-left ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}
-
-.footer-left li {
-  margin: 0 10px;
+.navbar button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s ease;
 }
 
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+.navbar button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
 }
 
-.footer-right a {
-  text-decoration: none;
-  margin: 0 5px;
+.navbar button:focus {
+  outline: none;
 }
 
-.footer-right a:hover {
-  color: #b5e1ff;
-}
-
-.footer-right a {
-  color: #fff;
-  transition: color 0.3s;
+.navbar button:active {
+  background-color: #1e6d92;
 }

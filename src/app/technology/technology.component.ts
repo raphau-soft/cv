@@ -6,15 +6,24 @@ import { HoverEffectDirective } from '../hover-effect.directive';
   selector: 'app-technology',
   imports: [CommonModule, HoverEffectDirective],
   templateUrl: './technology.component.html',
-  styleUrl: './technology.component.scss'
+  styleUrls: ['./technology.component.scss'],
+  standalone: true,
 })
 export class TechnologyComponent {
   technologies = [
-    { name: 'Java', icon: '/java.svg' },
-    { name: 'Spring Boot', icon: '/spring.svg' },
-    { name: 'Angular', icon: '/angular.svg' },
-    { name: 'PostgreSQL', icon: '/postgresql.svg' },
-    { name: 'Docker', icon: '/docker.svg' },
-    { name: 'Jenkins', icon: '/jenkins.svg' }
+    { name: 'Java', icon: '/java.svg', url: 'https://www.oracle.com/java/' },
+    {
+      name: 'Spring Boot',
+      icon: '/spring.svg',
+      url: 'https://spring.io/projects/spring-boot',
+    },
+    { name: 'Angular', icon: '/angular.svg', url: 'https://angular.io/' },
+    {
+      name: 'PostgreSQL',
+      icon: '/postgresql.svg',
+      url: 'https://www.postgresql.org/',
+    },
+    { name: 'Docker', icon: '/docker.svg', url: 'https://www.docker.com/' },
+    { name: 'Jenkins', icon: '/jenkins.svg', url: 'https://www.jenkins.io/' },
   ];
 }

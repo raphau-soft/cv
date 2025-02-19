@@ -1,42 +1,18 @@
 <nav class="navbar">
   <div class="navbar-left">
     <a routerLink="/home">Rafał Piszko</a>
-    <p>Java Developer | Spring | Angular | Microservices</p>
   </div>
   <ul>
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
+    <li><button (click)="scroll(homeElement)">Home</button></li>
+    <li><button (click)="scroll(techElement)">Skills</button></li>
+    <li><button (click)="scroll(expElement)">Experience</button></li>
+    <li><button (click)="scroll(contactElement)">Contact</button></li>
   </ul>
 </nav>
 
 <main>
-  <app-home></app-home>
-  <app-technology></app-technology>
-  <!-- <app-project></app-project> -->
-  <app-experience></app-experience>
+  <app-home #home></app-home>
+  <app-technology #tech></app-technology>
+  <app-experience #exp></app-experience>
+  <app-contact-me #contact></app-contact-me>
 </main>
-
-<footer class="footer">
-  <div class="footer-left">
-    <p class="footer-left-title">Used Technologies:</p>
-    <ul>
-      <li>Angular</li>
-      <li>TypeScript</li>
-      <li>SCSS</li>
-      <li>Font Awesome</li>
-    </ul>
-  </div>
-
-  <div class="footer-right">
-    <p>Copyright 2025&copy;</p>
-    <p>
-      <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
-      |
-      <a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a>
-      |
-      <a href="mailto:example@example.com"><i class="fa fa-envelope"></i></a>
-    </p>
-    <p>Rzeszów, Poland</p>
-  </div>
-</footer>
