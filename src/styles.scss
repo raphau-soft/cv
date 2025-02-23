@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,8 @@ body {
   font-weight: 400;
   color: #fff;
   margin: 0px;
-  background-color: rgba(14, 42, 71);
+  background-color: rgba(22, 38, 46);
+  min-width: 370px;
 }
 
 h1,
@@ -18,4 +20,44 @@ h2,
 h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  @include mat.menu-overrides(
+    (
+      item-label-text-color: #fff,
+      container-color: rgba(22, 38, 46),
+      item-hover-state-layer-color: rgb(28, 40, 46),
+    )
+  );
+  @include mat.dialog-overrides(
+    (
+      container-color: rgba(22, 38, 46),
+      subhead-color: #fff,
+    )
+  );
+  @include mat.form-field-overrides(
+    (
+      filled-label-text-color: #fff,
+      filled-container-color: #444,
+      filled-error-label-text-color: #e74c3c,
+      filled-error-hover-label-text-color: #c0392b,
+      filled-error-focus-label-text-color: #c0392b,
+      error-text-color: #e74c3c,
+      filled-focus-active-indicator-color: #f39c12,
+      filled-focus-label-text-color: #f39c12,
+      filled-hover-label-text-color: #f39c12,
+      filled-input-text-color: #fff,
+      filled-caret-color: #fff,
+    )
+  );
 }

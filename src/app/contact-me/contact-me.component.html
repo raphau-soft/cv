@@ -1,79 +1,53 @@
-<section id="contact-me">
-  <h2>Contact Me</h2>
+<h2 mat-dialog-title>Contact Me</h2>
+<mat-dialog-content>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input
-        id="name"
-        formControlName="name"
-        type="text"
-        placeholder="Your Name"
-        required
-      />
-      <div
-        class="error"
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error
         *ngIf="
           contactForm.get('name')?.invalid && contactForm.get('name')?.touched
         "
       >
-        <small *ngIf="contactForm.get('name')?.errors?.['required']"
-          >Name is required</small
-        >
-        <small *ngIf="contactForm.get('name')?.errors?.['minlength']"
-          >Minimum 2 characters</small
-        >
-      </div>
-    </div>
+        Name is required.
+      </mat-error>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input
-        id="email"
-        formControlName="email"
-        type="email"
-        placeholder="Your Email"
-        required
-      />
-      <div
-        class="error"
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" />
+      <mat-error
         *ngIf="
           contactForm.get('email')?.invalid && contactForm.get('email')?.touched
         "
       >
-        <small *ngIf="contactForm.get('email')?.errors?.['required']"
-          >Email is required</small
-        >
-        <small *ngIf="contactForm.get('email')?.errors?.['email']"
-          >Invalid email format</small
-        >
-      </div>
-    </div>
+        Enter a valid email.
+      </mat-error>
+    </mat-form-field>
 
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        formControlName="message"
-        rows="4"
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <div
-        class="error"
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message"></textarea>
+      <mat-error
         *ngIf="
           contactForm.get('message')?.invalid &&
           contactForm.get('message')?.touched
         "
       >
-        <small *ngIf="contactForm.get('message')?.errors?.['required']"
-          >Message is required</small
-        >
-        <small *ngIf="contactForm.get('message')?.errors?.['minlength']"
-          >Minimum 20 characters</small
-        >
-      </div>
-    </div>
+        Message is too short.
+      </mat-error>
+    </mat-form-field>
 
-    <button type="submit" [disabled]="contactForm.invalid">Send</button>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button
+        mat-button
+        color="primary"
+        type="submit"
+        [disabled]="contactForm.invalid"
+      >
+        Submit
+      </button>
+    </mat-dialog-actions>
   </form>
-</section>
+</mat-dialog-content>

@@ -2,17 +2,51 @@
   <div class="navbar-left">
     <a routerLink="/home">Rafał Piszko</a>
   </div>
-  <ul>
-    <li><button (click)="scroll(homeElement)">Home</button></li>
-    <li><button (click)="scroll(techElement)">Skills</button></li>
-    <li><button (click)="scroll(expElement)">Experience</button></li>
-    <li><button (click)="scroll(contactElement)">Contact</button></li>
+  <ul class="menu-list">
+    <li><a (click)="scroll(homeElement)">Home</a></li>
+    <li>
+      <a (click)="scroll(expElement)">Experience</a>
+    </li>
+    <li><a (click)="scroll(techElement)">Skills</a></li>
+    <li>
+      <a (click)="scroll(booksElement)">Education</a>
+    </li>
   </ul>
+  <div class="menu-toggle" [matMenuTriggerFor]="menu">☰</div>
 </nav>
 
 <main>
   <app-home #home></app-home>
-  <app-technology #tech></app-technology>
   <app-experience #exp></app-experience>
-  <app-contact-me #contact></app-contact-me>
+  <app-technology #tech></app-technology>
+  <app-books #books></app-books>
 </main>
+
+<mat-menu #menu="matMenu">
+  <button (click)="scroll(homeElement)" mat-menu-item>Home</button>
+  <button (click)="scroll(expElement)" mat-menu-item>Experience</button>
+  <button (click)="scroll(techElement)" mat-menu-item>Skills</button>
+  <button (click)="scroll(booksElement)" mat-menu-item>Education</button>
+</mat-menu>
+
+<footer class="footer">
+  <div class="footer-left">
+    <p>Copyright {{ currentYear }}&copy;</p>
+  </div>
+
+  <div class="footer-right">
+    <p>
+      <a
+        href="https://www.linkedin.com/in/rafa%C5%82-piszko-223455208/"
+        target="_blank"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+      |
+      <a href="https://github.com/raphau-soft?tab=repositories" target="_blank"
+        ><i class="fa fa-github"></i
+      ></a>
+      |
+      <a href="mailto:piszkorafal@gmail.com"><i class="fa fa-envelope"></i></a>
+    </p>
+  </div>
+</footer>

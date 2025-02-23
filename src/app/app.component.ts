@@ -1,8 +1,9 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './home/home.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
+import { BooksComponent } from './books/books.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     HomeComponent,
     TechnologyComponent,
     ExperienceComponent,
-    ContactMeComponent,
+    BooksComponent,
+    MatMenuModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -20,7 +22,8 @@ export class AppComponent {
   @ViewChild('home', { read: ElementRef }) homeElement!: ElementRef;
   @ViewChild('tech', { read: ElementRef }) techElement!: ElementRef;
   @ViewChild('exp', { read: ElementRef }) expElement!: ElementRef;
-  @ViewChild('contact', { read: ElementRef }) contactElement!: ElementRef;
+  @ViewChild('books', { read: ElementRef }) booksElement!: ElementRef;
+  currentYear: number = new Date().getFullYear();
 
   scroll(element: ElementRef) {
     const yOffset = -100;

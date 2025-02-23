@@ -1,0 +1,11 @@
+<section id="books">
+  <div class="books-read">
+    <h3>Education - Books & Courses</h3>
+    <ul>
+      <li *ngFor="let book of booksRead">
+        <strong>{{ book.title }}</strong> by {{ book.author }} <br />
+        <span class="book-year">📅 {{ book.year }}</span>
+      </li>
+    </ul>
+  </div>
+</section>

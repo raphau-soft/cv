@@ -33,27 +33,4 @@ export class ExperienceComponent {
       ],
     },
   ];
-
-  booksRead = [
-    {
-      title: 'The Pragmatic Programmer',
-      author: 'Andrew Hunt, David Thomas',
-      year: 1999,
-    },
-    {
-      title: 'Clean Code',
-      author: 'Robert C. Martin',
-      year: 2008,
-    },
-    {
-      title: 'Design Patterns: Elements of Reusable Object-Oriented Software',
-      author: 'Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides',
-      year: 1994,
-    },
-    {
-      title: 'The Clean Coder',
-      author: 'Robert C. Martin',
-      year: 2011,
-    },
-  ];
 }

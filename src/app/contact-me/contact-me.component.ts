@@ -6,10 +6,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, MatInputModule, MatDialogModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
   standalone: true,
@@ -17,7 +19,10 @@ import {
 export class ContactMeComponent {
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private dialogRef: MatDialogRef<ContactMeComponent>
+  ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -27,8 +32,7 @@ export class ContactMeComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
-      this.contactForm.reset();
+      this.dialogRef.close();
     }
   }
 }

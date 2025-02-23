@@ -1,4 +1,6 @@
 import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactMeComponent } from '../contact-me/contact-me.component';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +11,14 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HomeComponent {
   isScrolled: boolean = false;
+
+  constructor(private dialog: MatDialog) {}
+
+  openContactDialog() {
+    this.dialog.open(ContactMeComponent, {
+      width: '600px',
+    });
+  }
 
   @HostListener('window:scroll', [])
   onScroll(): void {

@@ -9,10 +9,9 @@
   width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  background: #1e1e1e;
   color: #fff;
+
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 
   h2 {
@@ -26,8 +25,21 @@
     gap: 1rem;
     padding: 0;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+
     .tech-item {
-      background: white;
+      background-size: cover;
+      background: url("/endless-constellation.svg") repeat;
       padding: 1rem;
       font-size: 1rem;
       display: flex;
@@ -37,6 +49,7 @@
       height: 180px;
       position: relative;
       overflow: hidden;
+      border-radius: 40px;
 
       p {
         font-size: 1.2rem;
@@ -56,19 +69,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        background: black;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        height: 100%;
-        width: 100%;
-      }
-
-      a:hover {
-        cursor: pointer;
+        background: rgba(46, 71, 86);
       }
     }
   }

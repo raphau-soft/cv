@@ -1,69 +1,49 @@
-#contact-me {
-  width: 100%;
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #1e1e1e;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+@use "@angular/material" as mat;
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
   text-align: center;
+}
 
-  h2 {
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-  }
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1rem;
+.mat-mdc-form-field {
+  border-radius: 5px;
+  padding: 5px;
+}
 
-    label {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
+mat-error {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border-radius: 5px;
-      border: none;
-      font-size: 1rem;
-      background: #333;
-      color: white;
-    }
+button {
+  background: #ca7d00;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    textarea {
-      resize: none;
-    }
+button:hover {
+  background: #df931a;
+}
 
-    .error {
-      color: #e74c3c;
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
-  }
+button:disabled {
+  background: gray;
+  cursor: default;
+}
 
-  button {
-    background: #f39c12;
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: #d68910;
-    }
-
-    &:disabled {
-      background: gray;
-      cursor: not-allowed;
-    }
-  }
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end !important;
+  padding: 16px 4px !important;
+  gap: 10px;
 }
