@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="navbar-left">
-    <a routerLink="/home">Rafał Piszko</a>
+    <a (click)="scroll(homeElement)">Rafał Piszko</a>
   </div>
   <ul class="menu-list">
     <li><a (click)="scroll(homeElement)">Home</a></li>
@@ -46,7 +46,7 @@
         ><i class="fa fa-github"></i
       ></a>
       |
-      <a href="mailto:piszkorafal@gmail.com"><i class="fa fa-envelope"></i></a>
+      <a (click)="sendEmail()"><i class="fa fa-envelope"></i></a>
     </p>
   </div>
 </footer>

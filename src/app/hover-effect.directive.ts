@@ -55,7 +55,7 @@ export class HoverEffectDirective {
       this.renderer.setStyle(
         this.revealedArea,
         'background',
-        `radial-gradient(circle 90px at ${x}% ${y}%, rgba(46, 71, 86, 0.1) 0%, rgba(46, 71, 86, 1) 100%)`
+        `radial-gradient(circle 90px at ${x}% ${y}%, rgba(46, 60, 67, 0.1) 0%, rgba(46, 60, 67, 1) 100%)`
       );
     }
   }
@@ -65,7 +65,7 @@ export class HoverEffectDirective {
       this.renderer.setStyle(
         this.revealedArea,
         'background',
-        'rgba(46, 71, 86)'
+        'rgba(46, 60, 67)'
       );
     }
   }

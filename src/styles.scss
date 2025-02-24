@@ -35,7 +35,7 @@ body {
   @include mat.menu-overrides(
     (
       item-label-text-color: #fff,
-      container-color: rgba(22, 38, 46),
+      container-color: rgba(46, 60, 67),
       item-hover-state-layer-color: rgb(28, 40, 46),
     )
   );
@@ -58,6 +58,18 @@ body {
       filled-hover-label-text-color: #f39c12,
       filled-input-text-color: #fff,
       filled-caret-color: #fff,
+    )
+  );
+  @include mat.snack-bar-overrides(
+    (
+      container-color: rgba(46, 60, 67),
+      supporting-text-color: #fff,
+      button-color: #f39c12,
+    )
+  );
+  @include mat.progress-spinner-overrides(
+    (
+      active-indicator-color: #fff,
     )
   );
 }

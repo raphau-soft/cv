@@ -34,4 +34,11 @@ export class AppComponent {
 
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
+
+  sendEmail() {
+    const user = 'piszkorafal';
+    const domain = 'gmail.com';
+
+    window.location.href = 'mailto:' + user + '@' + domain;
+  }
 }

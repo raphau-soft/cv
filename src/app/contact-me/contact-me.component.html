@@ -44,9 +44,15 @@
         mat-button
         color="primary"
         type="submit"
+        class="submit-button"
         [disabled]="contactForm.invalid"
       >
-        Submit
+        <span *ngIf="!loading">Submit</span>
+        <mat-progress-spinner
+          *ngIf="loading"
+          diameter="20"
+          mode="indeterminate"
+        ></mat-progress-spinner>
       </button>
     </mat-dialog-actions>
   </form>
