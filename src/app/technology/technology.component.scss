@@ -1,3 +1,5 @@
+@use "../../colors.scss";
+
 #tech-stack {
   width: 100%;
   display: flex;
@@ -9,7 +11,6 @@
   width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  color: #fff;
 
   border-radius: 10px;
   text-align: center;
@@ -17,6 +18,7 @@
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: colors.$secondary-color;
   }
 
   .tech-grid {
@@ -69,7 +71,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        background: rgba(46, 60, 67);
+        background: colors.$third-color;
       }
     }
   }

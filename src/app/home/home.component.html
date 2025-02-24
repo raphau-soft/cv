@@ -4,13 +4,13 @@
   >
   <h1 class="slide-in-container">
     <div class="slide-in-text" [class.shrink]="isScrolled">
-      Spring and Angular <span class="text-blue">developer</span>
+      Spring and Angular <span class="text-developer">developer</span>
     </div>
     <span class="cursor">|</span>
   </h1>
 
   <div class="contact-buttons">
-    <button type="button">Download CV</button>
+    <button type="button" (click)="openCV()">Download CV</button>
     <button type="button" (click)="openContactDialog()">Contact Me</button>
   </div>
 </section>

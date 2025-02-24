@@ -1,10 +1,12 @@
+@use "../../colors.scss";
+
 #books {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
-  color: #fff;
+  color: colors.$primary-text-color;
   .books-read {
     margin-top: 3rem;
     text-align: center;
@@ -13,7 +15,7 @@
 
     h3 {
       font-size: 2rem;
-      color: #f39c12;
+      color: colors.$secondary-color;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -38,7 +40,7 @@
 
         .book-year {
           font-size: 0.9rem;
-          color: #f39c12;
+          color: colors.$secondary-color;
         }
       }
     }

@@ -1,4 +1,5 @@
 @use "@angular/material" as mat;
+@use "colors.scss";
 
 * {
   margin: 0;
@@ -9,10 +10,10 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: colors.$primary-text-color;
   margin: 0px;
-  background-color: rgba(22, 38, 46);
   min-width: 370px;
+  background-color: colors.$background-color;
 }
 
 h1,
@@ -26,6 +27,7 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -34,42 +36,46 @@ body {
 :root {
   @include mat.menu-overrides(
     (
-      item-label-text-color: #fff,
-      container-color: rgba(46, 60, 67),
-      item-hover-state-layer-color: rgb(28, 40, 46),
+      item-label-text-color: colors.$primary-text-color,
+      container-color: colors.$third-color,
+      item-hover-state-layer-color: colors.$third-color-hover,
     )
   );
   @include mat.dialog-overrides(
     (
-      container-color: rgba(22, 38, 46),
-      subhead-color: #fff,
+      container-color: colors.$dialog-container-color,
+      subhead-color: colors.$primary-text-color,
     )
   );
   @include mat.form-field-overrides(
     (
-      filled-label-text-color: #fff,
-      filled-container-color: #444,
-      filled-error-label-text-color: #e74c3c,
-      filled-error-hover-label-text-color: #c0392b,
-      filled-error-focus-label-text-color: #c0392b,
-      error-text-color: #e74c3c,
-      filled-focus-active-indicator-color: #f39c12,
-      filled-focus-label-text-color: #f39c12,
-      filled-hover-label-text-color: #f39c12,
-      filled-input-text-color: #fff,
-      filled-caret-color: #fff,
+      filled-label-text-color: colors.$primary-text-color,
+      filled-container-color: colors.$form-field-bg,
+      filled-error-label-text-color: colors.$error-color,
+      filled-error-hover-label-text-color: colors.$error-hover-color,
+      filled-error-focus-label-text-color: colors.$error-hover-color,
+      error-text-color: colors.$error-color,
+      filled-focus-active-indicator-color: colors.$secondary-color,
+      filled-focus-label-text-color: colors.$secondary-color,
+      filled-hover-label-text-color: colors.$secondary-color,
+      filled-input-text-color: colors.$primary-text-color,
+      filled-caret-color: colors.$primary-text-color,
     )
   );
   @include mat.snack-bar-overrides(
     (
-      container-color: rgba(46, 60, 67),
-      supporting-text-color: #fff,
-      button-color: #f39c12,
+      container-color: colors.$third-color,
+      supporting-text-color: colors.$primary-text-color,
+      button-color: colors.$secondary-color,
     )
   );
   @include mat.progress-spinner-overrides(
     (
-      active-indicator-color: #fff,
+      active-indicator-color: colors.$primary-text-color,
     )
   );
+}
+
+.backdrop-class {
+  background-color: colors.$backdrop-color;
 }

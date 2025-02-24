@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ContactMeComponent } from '../contact-me/contact-me.component';
 
 @Component({
@@ -17,7 +17,14 @@ export class HomeComponent {
   openContactDialog() {
     this.dialog.open(ContactMeComponent, {
       width: '600px',
+      backdropClass: 'backdrop-class',
     });
+  }
+
+  openCV() {
+    const cvUrl = 'rafal_piszko_java_developer.pdf';
+
+    window.open(cvUrl, '_blank');
   }
 
   @HostListener('window:scroll', [])

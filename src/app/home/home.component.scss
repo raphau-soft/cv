@@ -1,5 +1,7 @@
-.text-blue {
-  color: #f39c12;
+@use "../../colors.scss";
+
+.text-developer {
+  color: colors.$secondary-color;
 }
 
 #about {
@@ -9,7 +11,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(22, 38, 46, 1);
 }
 
 .welcome-text {
@@ -31,7 +32,7 @@
   width: 0;
   animation: expandText 2s ease-out forwards;
   font-weight: bold;
-  color: #fff;
+  color: colors.$primary-text-color;
   white-space: nowrap;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .cursor {
-  color: #f39c12;
+  color: colors.$secondary-color;
   animation: blink 1s infinite;
 }
 
@@ -71,8 +72,8 @@
 }
 
 button {
-  background: #ca7d00;
-  color: white;
+  background: colors.$secondary-color;
+  color: colors.$primary-text-color;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.75rem 1.5rem;
@@ -85,7 +86,7 @@ button {
   overflow: hidden;
 
   &:hover {
-    background: #df931a;
+    background: colors.$secondary-color-hover;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
