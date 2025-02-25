@@ -6,10 +6,14 @@
       <input matInput formControlName="name" />
       <mat-error
         *ngIf="
-          contactForm.get('name')?.invalid && contactForm.get('name')?.touched
+          contactForm.get('name')?.hasError('required') &&
+          contactForm.get('name')?.touched
         "
       >
         Name is required.
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('name')?.hasError('maxlength')">
+        Name is too long.
       </mat-error>
     </mat-form-field>
 
@@ -30,11 +34,17 @@
       <textarea matInput formControlName="message"></textarea>
       <mat-error
         *ngIf="
-          contactForm.get('message')?.invalid &&
+          contactForm.get('message')?.hasError('required') &&
           contactForm.get('message')?.touched
         "
       >
+        Message is required.
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
         Message is too short.
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('maxlength')">
+        Message cannot exceed 500 characters.
       </mat-error>
     </mat-form-field>
 
