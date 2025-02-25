@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class BooksComponent {
   booksRead = [
     {
-      title: 'Web Application Security (Bezpieczeństwo aplikacji webowych)',
+      title: 'Web Application Security',
       author: 'Sekurak',
       year: 1999,
       type: 'book',
@@ -24,8 +24,7 @@ export class BooksComponent {
       link: 'https://microservices.io/book',
     },
     {
-      title:
-        'TDD, Clean Code, and Refactoring (JAVA, C#, Object-Oriented Languages)',
+      title: 'TDD, Clean Code, and Refactoring',
       author: 'Piotr Walczak',
       year: 2022,
       type: 'course',

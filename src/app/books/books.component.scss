@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 4rem 2rem;
   color: colors.$primary-text-color;
 
   .books-read {
     margin-top: 3rem;
-    text-align: center;
     width: 100%;
     max-width: 800px;
 
@@ -20,6 +20,7 @@
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: center;
     }
 
     ul {
@@ -28,6 +29,9 @@
       margin: 0;
 
       li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 1rem;
         border-radius: 8px;
         margin-bottom: 1rem;
@@ -40,9 +44,22 @@
           background: rgba(255, 255, 255, 0.15);
         }
 
+        .book-icon {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          color: colors.$secondary-color;
+        }
+
+        .book-info {
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+        }
+
         .book-year {
           font-size: 0.9rem;
           color: colors.$secondary-color;
+          margin-left: auto;
         }
       }
 

@@ -9,12 +9,17 @@
         role="button"
         tabindex="0"
       >
-        <i *ngIf="book.type === 'book'" class="fa fa-book"></i>
-        <i *ngIf="book.type === 'course'" class="fa fa-graduation-cap"></i>
-        <strong>{{ book.title }}</strong>
-        <br />
-        by {{ book.author }} <br />
-        <span class="book-year">📅 {{ book.year }}</span>
+        <div class="book-icon">
+          <i *ngIf="book.type === 'book'" class="fa fa-book"></i>
+          <i *ngIf="book.type === 'course'" class="fa fa-graduation-cap"></i>
+        </div>
+        <div class="book-info">
+          <strong>{{ book.title }}</strong>
+          <span
+            >{{ book.author
+            }}<span class="book-year"> 📅 {{ book.year }}</span></span
+          >
+        </div>
       </li>
     </ul>
   </div>
