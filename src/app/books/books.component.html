@@ -2,8 +2,18 @@
   <div class="books-read">
     <h3>Education - Books & Courses</h3>
     <ul>
-      <li *ngFor="let book of booksRead">
-        <strong>{{ book.title }}</strong> by {{ book.author }} <br />
+      <li
+        *ngFor="let book of booksRead"
+        [ngClass]="book.type"
+        (click)="openLink(book.link)"
+        role="button"
+        tabindex="0"
+      >
+        <i *ngIf="book.type === 'book'" class="fa fa-book"></i>
+        <i *ngIf="book.type === 'course'" class="fa fa-graduation-cap"></i>
+        <strong>{{ book.title }}</strong>
+        <br />
+        by {{ book.author }} <br />
         <span class="book-year">📅 {{ book.year }}</span>
       </li>
     </ul>
