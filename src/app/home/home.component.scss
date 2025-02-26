@@ -124,3 +124,17 @@ button {
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 350px) {
+  .welcome-text {
+    font-size: 0.8rem;
+    margin: 20px;
+  }
+
+  .slide-in-text {
+    font-size: 1.2rem;
+  }
+  .cursor {
+    font-size: 1.2rem;
+  }
+}

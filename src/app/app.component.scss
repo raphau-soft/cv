@@ -8,6 +8,7 @@
   align-items: center;
   border-bottom: 2px solid #313131;
   width: 100%;
+  min-width: 320px;
   background-color: rgba(22, 38, 46);
   z-index: 999;
   font-size: 1.25rem;
@@ -16,6 +17,7 @@
 .navbar-left {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 .navbar-left p {
