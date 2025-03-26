@@ -12,7 +12,7 @@ export class BooksComponent {
     {
       title: 'Web Application Security',
       author: 'Sekurak',
-      year: 1999,
+      year: 2021,
       type: 'book',
       link: 'https://sklep.securitum.pl/ksiazka-bezpieczenstwo-aplikacji-webowych',
     },
