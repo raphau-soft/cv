@@ -30,6 +30,13 @@ export class BooksComponent {
       type: 'course',
       link: 'tdd_clean_code_and_refactoring_certificate.pdf',
     },
+    {
+      title: 'Application Architecture, Clean Architecture (Java)',
+      author: 'Artur Laskowski',
+      year: 2025,
+      type: 'course',
+      link: 'application_architecture_certificate.pdf',
+    },
   ];
 
   openLink(link: string) {
