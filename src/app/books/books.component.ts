@@ -39,6 +39,10 @@ export class BooksComponent {
     },
   ];
 
+  ngOnInit(): void {
+    this.booksRead.sort((a, b) => b.year - a.year);
+  }
+
   openLink(link: string) {
     window.open(link, '_blank');
   }
