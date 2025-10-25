@@ -11,9 +11,20 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
   experienceList = [
     {
+      position: 'Backend Specialist',
+      company: 'Totalizator Sportowy',
+      period: '2025 - now',
+      tasks: [
+        'Developing and maintaining backend services using Spring Boot, following clean architecture and best coding practices.',
+        'Designing and implementing RESTful APIs for internal and external integrations.',
+        'Optimizing application performance and ensuring reliability in production environments.',
+        'Participating in code reviews and contributing to continuous improvement of development processes.'
+      ],
+    },
+    {
       position: 'Java Developer',
       company: 'Comarch Telecommunications',
-      period: '2021 - Present',
+      period: '2021 - 2025',
       tasks: [
         'Developed a full-stack application using Angular and Spring Boot.',
         'Integrated applications with external systems via REST/SOAP APIs.',
